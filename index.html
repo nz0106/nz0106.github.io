@@ -1,15 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>页面结构</title>
-</head>
-<body>
-
-<header><h2>网页头部</h2></header>
-
-<section><h2>网页主体</h2></section>
-
-<footer><h2>网页脚部</h2></footer>
-</body>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>九九乘法表</title>
+ </head>
+ <style>
+ td{
+ border:1px solid;
+ }
+ </style>
+ <body>
+  <script>
+document.write("<table align='center'>");
+for(var i=1;i<=9;i++){
+document.write("<tr>");
+for(var j=1;j<=i;j++){
+document.write("<td>");
+document.write(i+"*"+j+"="+(i*j)+"&nbsp&nbsp&nbsp");
+document.write("</td>");
+}
+document.write("</tr>");}
+document.write("</table>");
+</script>
+ </body>
 </html>
