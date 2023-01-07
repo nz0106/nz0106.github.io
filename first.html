@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            cursor: pointer;
+        }
+        div {
+            width: 150px;
+            height: 150px;
+            margin: 0;
+            padding: 0;
+            color: #00ffff;
+            box-sizing: border-box;
+            border: 1px solid rgb(100, 100, 200);
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            text-shadow: 1px 1px rgb(0, 100, 100);
+            background-color: rgba(100, 100, 100, 0.1);
+            /**position: absolute; */
+        }
+    </style>
+</head>
+<body>
+<script>
+    var a=[];
+    for (var i = 0; i < 100; i++) {
+        var divDom = document.createElement("div");
+        divDom.textContent = "床前明月光,疑是地上霜。举头望明月,低头思故乡。";
+        document.body.appendChild(divDom);
+        a.push(divDom);
+    }
+    document.body.onmouseover= function () {
+        for(let b of a){
+            mouseOver(b);
+        }
+    }
+    document.body.onclick = function () {
+        for(let b of a){
+            randomPositon(b);
+        }
+    }
+    var bodyWidth = window.innerWidth;
+    var bodyHeight = window.innerHeight;
+    document.body.style.width = bodyWidth + "px";
+    document.body.style.height = bodyHeight + "px";
+    function randomPositon(dom){
+        var bodyWidth = window.innerWidth;
+        var bodyHeight = window.innerHeight;
+        dom.style.marginLeft=Math.floor(Math.random()*bodyWidth)+"px";//水平方向随机距离
+        dom.style.marginTop=Math.floor(Math.random()*bodyHeight)+"px";
+    }
+    function mouseOver(dom){
+        dom.style.margin = "auto";
+    }
+</script>
+</body>
+</html>
